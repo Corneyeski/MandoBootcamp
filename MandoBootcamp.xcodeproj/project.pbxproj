@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE55902D20A2F84C0092E0C0 /* MandoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55902C20A2F84C0092E0C0 /* MandoViewController.swift */; };
 		CEAAEFCA20A2DC35000FAE77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFC920A2DC35000FAE77 /* AppDelegate.swift */; };
 		CEAAEFCC20A2DC35000FAE77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFCB20A2DC35000FAE77 /* ViewController.swift */; };
 		CEAAEFCF20A2DC35000FAE77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAAEFCD20A2DC35000FAE77 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE55902C20A2F84C0092E0C0 /* MandoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandoViewController.swift; sourceTree = "<group>"; };
 		CEAAEFC620A2DC35000FAE77 /* MandoBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MandoBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAAEFC920A2DC35000FAE77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAAEFCB20A2DC35000FAE77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				CEAAEFD020A2DC37000FAE77 /* Assets.xcassets */,
 				CEAAEFD220A2DC37000FAE77 /* LaunchScreen.storyboard */,
 				CEAAEFD520A2DC37000FAE77 /* Info.plist */,
+				CE55902C20A2F84C0092E0C0 /* MandoViewController.swift */,
 			);
 			path = MandoBootcamp;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE55902D20A2F84C0092E0C0 /* MandoViewController.swift in Sources */,
 				CEAAEFCC20A2DC35000FAE77 /* ViewController.swift in Sources */,
 				CEAAEFCA20A2DC35000FAE77 /* AppDelegate.swift in Sources */,
 			);
