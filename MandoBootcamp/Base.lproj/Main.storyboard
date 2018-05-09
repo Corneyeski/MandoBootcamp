@@ -29,10 +29,6 @@
                                 <rect key="frame" x="33" y="91" width="308" height="302"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ecoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="YE0-l8-1ql">
-                                        <rect key="frame" x="14" y="125" width="45" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="batteryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="c49-IY-sx1">
                                         <rect key="frame" x="14" y="245" width="79" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -278,7 +274,6 @@
                     <connections>
                         <outlet property="blueView" destination="K1F-Xl-exf" id="px7-XE-XUX"/>
                         <outlet property="coldImage" destination="1FS-T8-oeu" id="iLB-Qc-qEA"/>
-                        <outlet property="ecoImage" destination="YE0-l8-1ql" id="bbk-f7-uY8"/>
                         <outlet property="hotImage" destination="GQF-gy-lhh" id="Ip9-Oe-0iB"/>
                         <outlet property="hourEndLabel" destination="V2y-62-oW2" id="RPC-VK-zcI"/>
                         <outlet property="hourStartLabel" destination="Gma-VW-p3O" id="TfV-7x-EZP"/>
@@ -305,7 +300,6 @@
         <image name="button" width="900" height="879"/>
         <image name="coldIcon" width="512" height="512"/>
         <image name="directionIcon" width="512" height="512"/>
-        <image name="ecoIcon" width="512" height="512"/>
         <image name="fanIcon" width="200" height="200"/>
         <image name="hotIcon" width="798" height="980"/>
         <image name="lightIcon" width="256" height="256"/>
