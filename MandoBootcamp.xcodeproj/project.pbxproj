@@ -13,6 +13,9 @@
 		CEAAEFCF20A2DC35000FAE77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAAEFCD20A2DC35000FAE77 /* Main.storyboard */; };
 		CEAAEFD120A2DC37000FAE77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAAEFD020A2DC37000FAE77 /* Assets.xcassets */; };
 		CEAAEFD420A2DC37000FAE77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAAEFD220A2DC37000FAE77 /* LaunchScreen.storyboard */; };
+		CEAAEFDD20A2F91F000FAE77 /* AireAcondicionado.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFDC20A2F91F000FAE77 /* AireAcondicionado.swift */; };
+		CEAAEFDF20A2F9CC000FAE77 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFDE20A2F9CC000FAE77 /* Sensor.swift */; };
+		CEAAEFE120A3054D000FAE77 /* Temperatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFE020A3054D000FAE77 /* Temperatura.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		CEAAEFD020A2DC37000FAE77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAAEFD320A2DC37000FAE77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAAEFD520A2DC37000FAE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAAEFDC20A2F91F000FAE77 /* AireAcondicionado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireAcondicionado.swift; sourceTree = "<group>"; };
+		CEAAEFDE20A2F9CC000FAE77 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		CEAAEFE020A3054D000FAE77 /* Temperatura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperatura.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		CEAAEFC820A2DC35000FAE77 /* MandoBootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				CEAAEFDB20A2F8D8000FAE77 /* entities */,
 				CEAAEFC920A2DC35000FAE77 /* AppDelegate.swift */,
 				CEAAEFCB20A2DC35000FAE77 /* ViewController.swift */,
 				CEAAEFCD20A2DC35000FAE77 /* Main.storyboard */,
@@ -65,6 +72,16 @@
 				CE55902C20A2F84C0092E0C0 /* MandoViewController.swift */,
 			);
 			path = MandoBootcamp;
+			sourceTree = "<group>";
+		};
+		CEAAEFDB20A2F8D8000FAE77 /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				CEAAEFDC20A2F91F000FAE77 /* AireAcondicionado.swift */,
+				CEAAEFDE20A2F9CC000FAE77 /* Sensor.swift */,
+				CEAAEFE020A3054D000FAE77 /* Temperatura.swift */,
+			);
+			path = entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +157,7 @@
 			files = (
 				CE55902D20A2F84C0092E0C0 /* MandoViewController.swift in Sources */,
 				CEAAEFCC20A2DC35000FAE77 /* ViewController.swift in Sources */,
+				CEAAEFE120A3054D000FAE77 /* Temperatura.swift in Sources */,
 				CEAAEFCA20A2DC35000FAE77 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
