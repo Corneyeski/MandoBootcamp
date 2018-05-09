@@ -70,6 +70,7 @@ class MandoViewController: UIViewController {
             self.viewDidLoad()
             self.isOn = true;
         }
+        
     }
     @IBAction func modeButton(_ sender: UIButton) {
         if self.coldImage.isHidden {
