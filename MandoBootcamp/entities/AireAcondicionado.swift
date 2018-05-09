@@ -12,7 +12,7 @@ class AireAcondicionado {
     
     static let AAcontroller:AireAcondicionado = AireAcondicionado()
     
-    var running:Bool = false
+    var running:Bool = true
     private var active:Bool = false
     private var cool = true
     private var tuser:Int = 0
@@ -62,7 +62,12 @@ class AireAcondicionado {
     
     private func checkAndRun(){
         if tuser != tAmbiente {
-            
+            active = true
+            run = Timer.scheduledTimer(timeInterval: 15,
+                                         target: self,
+                                         selector: #selector(startCheckTemperature(data: )),
+                                         userInfo: "",
+                                         repeats: true)
         }else{
             active = false
         }
@@ -70,7 +75,7 @@ class AireAcondicionado {
     
     func onOff(){
         if !running {
-            check = Timer.scheduledTimer(timeInterval: 0.5,
+            check = Timer.scheduledTimer(timeInterval: 15,
                                  target: self,
                                  selector: #selector(startCheckTemperature(data: )),
                                  userInfo: "",
@@ -80,6 +85,7 @@ class AireAcondicionado {
             running = false
             check.invalidate()
         }
+        checkAndRun()
     }
     
     @objc private func startCheckTemperature(data:Timer){
