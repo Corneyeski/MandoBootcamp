@@ -15,7 +15,6 @@ class MandoViewController: UIViewController {
     @IBOutlet weak var hotImage: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var tempUnitLabel: UILabel!
-    @IBOutlet weak var ecoImage: UIImageView!
     @IBOutlet weak var line1VelocityView: UIView!
     @IBOutlet weak var line2VelocityView: UIView!
     @IBOutlet weak var line3VelocityView: UIView!
@@ -28,7 +27,10 @@ class MandoViewController: UIViewController {
     @IBOutlet weak var hourStartLabel: UILabel!
     @IBOutlet weak var hourEndLabel: UILabel!
     
-    var velocity = 2;
+    var velocity = 1 //2 arriba 2 abajo
+    var velocitys = [UIView]()
+    
+    var isOn = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +38,12 @@ class MandoViewController: UIViewController {
         self.coldImage.isHidden = false
         self.hotImage.isHidden = true
 
-        self.line1VelocityView.isHidden = false
-        self.line2VelocityView.isHidden = false
-        self.line3VelocityView.isHidden = true
-        self.line4VelocityView.isHidden = true
+        self.velocitys = [line1VelocityView, line2VelocityView, line3VelocityView, line4VelocityView]
+        self.velocitys[0].isHidden = false
+        self.velocitys[1].isHidden = false
+        self.velocitys[2].isHidden = true
+        self.velocitys[3].isHidden = true
+
         
         // Do any additional setup after loading the view.
     }
@@ -59,6 +63,13 @@ class MandoViewController: UIViewController {
         }
     }
     @IBAction func onoffButton(_ sender: UIButton) {
+        if self.isOn {
+            self.blueView.backgroundColor = UIColor(white: 0.0, alpha: 1.0)
+            self.isOn = false;
+        } else {
+            self.viewDidLoad()
+            self.isOn = true;
+        }
     }
     @IBAction func modeButton(_ sender: UIButton) {
         if self.coldImage.isHidden {
@@ -70,11 +81,25 @@ class MandoViewController: UIViewController {
         }
     }
     @IBAction func fanButton(_ sender: UIButton) {
-        
+        if self.velocity == 3 {
+            for view in 1..<4 {
+                self.velocitys[view].isHidden = true
+            }
+            self.velocity = 0;
+        } else {
+            self.velocitys[self.velocity+1].isHidden = false
+            self.velocity += 1
+        }
     }
     @IBAction func tempUpButton(_ sender: UIButton) {
+        if Int(self.tempLabel.text!)! < 29 {
+            self.tempLabel.text = String(Int(self.tempLabel.text!)!+1)
+        }
     }
     @IBAction func tempDownButton(_ sender: UIButton) {
+        if Int(self.tempLabel.text!)! > 15 {
+            self.tempLabel.text = String(Int(self.tempLabel.text!)!-1)
+        }
     }
     @IBAction func directionButton(_ sender: UIButton) {
     }
