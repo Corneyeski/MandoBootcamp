@@ -14,6 +14,7 @@ class AireAcondicionado {
     
     var running:Bool = false
     private var active:Bool = false
+    private var cool = true
     private var tuser:Int = 0
     private var tAmbiente:Int = Sensor.SSensor.getTemperatura()
     private var estado:[String:Any] = ["hello":0]
@@ -21,6 +22,11 @@ class AireAcondicionado {
     private var startAlarm = 0.0
     private var endAlarm = 0.0
     private var speed = 0
+    
+    //Timers
+    private var check:Timer!
+    
+    private var run:Timer!
     
     func run(run:Bool) {
         if run && !running {
@@ -60,5 +66,25 @@ class AireAcondicionado {
         }else{
             active = false
         }
+    }
+    
+    func onOff(){
+        if !running {
+            check = Timer.scheduledTimer(timeInterval: 0.5,
+                                 target: self,
+                                 selector: #selector(startCheckTemperature(data: )),
+                                 userInfo: "",
+                                 repeats: true)
+            running = true
+        }else{
+            running = false
+            check.invalidate()
+        }
+    }
+    
+    @objc private func startCheckTemperature(data:Timer){
+        AireAcondicionado.AAcontroller.tAmbiente = Sensor.SSensor.getTemperatura()
+        
+        print("habitacion: \(tAmbiente) usuario: \(tuser)")
     }
 }
