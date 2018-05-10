@@ -90,7 +90,22 @@ class AireAcondicionado {
     
     @objc private func startCheckTemperature(data:Timer){
         AireAcondicionado.AAcontroller.tAmbiente = Sensor.SSensor.getTemperatura()
-        
+        checkAndRun()
         print("habitacion: \(tAmbiente) usuario: \(tuser)")
+    }
+    
+    @objc private func startTemperature(data:Timer){
+        
+        if tuser != tAmbiente{
+            if tAmbiente < tuser {
+                tAmbiente += 1
+            }else {
+                tAmbiente -= 1
+            }
+        }else{
+            active = false
+            run.invalidate()
+        }
+        
     }
 }
