@@ -88,6 +88,10 @@ class AireAcondicionado {
         checkAndRun()
     }
     
+    func returnAmbiente() -> Int {
+        return tAmbiente
+    }
+    
     @objc private func startCheckTemperature(data:Timer){
         AireAcondicionado.AAcontroller.tAmbiente = Sensor.SSensor.getTemperatura()
         checkAndRun()
