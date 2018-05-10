@@ -12,7 +12,7 @@ class AireAcondicionado {
     
     static let AAcontroller:AireAcondicionado = AireAcondicionado()
     
-    var running:Bool = true
+    var running:Bool = false
     private var active:Bool = false
     private var cool = true
     private var tuser:Int = 0

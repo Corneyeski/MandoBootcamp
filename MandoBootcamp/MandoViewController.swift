@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MandoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class MandoViewController: UIViewController {
     
     @IBOutlet weak var blueView: UIView!
     @IBOutlet weak var coldImage: UIImageView!
@@ -26,7 +26,6 @@ class MandoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var line5BatteryView: UIView!
     @IBOutlet weak var hourStartLabel: UILabel!
     @IBOutlet weak var hourEndLabel: UILabel!
-    @IBOutlet weak var movingPicker: UIPickerView!
     var velocity = 1 //2 arriba 2 abajo
     var velocitys = [UIView]()
     
@@ -63,10 +62,7 @@ class MandoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         self.batteryTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(updateBattery(data:)), userInfo: "", repeats: true)
         
-        self.movingPicker.isHidden = false
-        self.movingPicker.delegate = self
-        self.movingPicker.dataSource = self
-                        pickerData = ["Item 1", "Item 2", "Item 2", "Item 2", "Item 2"]
+        pickerData = ["00:00", "01:00", "02:00", "03:00", "04:00","05:00", "00:00", "00:00", "00:00","00:00", "00:00", "00:00", "00:00","00:00", "00:00", "00:00", "00:00","00:00", "00:00", "00:00", "00:00"]
 
     }
 
@@ -84,30 +80,6 @@ class MandoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         if self.battery == 0 {
             self.batterys[0].backgroundColor = UIColor.red
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    // The number of columns of data
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    // The number of rows of data
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
-    }
-    
-    // The data to return for the row and component (column) that's being passed in
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
     }
     
     @IBAction func lightButton(_ sender: UIButton) {
@@ -173,8 +145,27 @@ class MandoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBAction func setButton(_ sender: UIButton) {
     }
     
+}
+
+extension MandoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
+    // The number of columns of data
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 2
+    }
     
+    // The number of rows of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
     
+    // The data to return for the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
 }
