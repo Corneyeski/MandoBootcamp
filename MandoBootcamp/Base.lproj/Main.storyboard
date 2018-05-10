@@ -267,6 +267,10 @@
                                     <action selector="movingButton:" destination="CjP-QS-oEF" eventType="touchUpInside" id="PIF-th-EjF"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kad-bP-2DI">
+                                <rect key="frame" x="14" y="625" width="78" height="57"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dQT-TB-XvC"/>
@@ -286,6 +290,7 @@
                         <outlet property="line4BatteryView" destination="i6K-N6-OfG" id="PmV-XC-UF4"/>
                         <outlet property="line4VelocityView" destination="W6G-Qr-qy4" id="J6y-Ho-YE3"/>
                         <outlet property="line5BatteryView" destination="Xe0-kn-ofB" id="icH-LR-oVE"/>
+                        <outlet property="movingPicker" destination="kad-bP-2DI" id="C7r-6b-27h"/>
                         <outlet property="tempLabel" destination="i7h-eo-Ajt" id="3Tz-vx-ZHX"/>
                         <outlet property="tempUnitLabel" destination="mFW-p6-t6E" id="dSw-fI-VCo"/>
                     </connections>

@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		CE55902D20A2F84C0092E0C0 /* MandoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55902C20A2F84C0092E0C0 /* MandoViewController.swift */; };
+		CE55902E20A32E280092E0C0 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFDE20A2F9CC000FAE77 /* Sensor.swift */; };
+		CE55902F20A32E520092E0C0 /* AireAcondicionado.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFDC20A2F91F000FAE77 /* AireAcondicionado.swift */; };
 		CEAAEFCA20A2DC35000FAE77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFC920A2DC35000FAE77 /* AppDelegate.swift */; };
 		CEAAEFCC20A2DC35000FAE77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFCB20A2DC35000FAE77 /* ViewController.swift */; };
 		CEAAEFCF20A2DC35000FAE77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAAEFCD20A2DC35000FAE77 /* Main.storyboard */; };
 		CEAAEFD120A2DC37000FAE77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAAEFD020A2DC37000FAE77 /* Assets.xcassets */; };
 		CEAAEFD420A2DC37000FAE77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAAEFD220A2DC37000FAE77 /* LaunchScreen.storyboard */; };
-		CEAAEFDD20A2F91F000FAE77 /* AireAcondicionado.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFDC20A2F91F000FAE77 /* AireAcondicionado.swift */; };
-		CEAAEFDF20A2F9CC000FAE77 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFDE20A2F9CC000FAE77 /* Sensor.swift */; };
 		CEAAEFE120A3054D000FAE77 /* Temperatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFE020A3054D000FAE77 /* Temperatura.swift */; };
 /* End PBXBuildFile section */
 
@@ -155,7 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE55902F20A32E520092E0C0 /* AireAcondicionado.swift in Sources */,
 				CE55902D20A2F84C0092E0C0 /* MandoViewController.swift in Sources */,
+				CE55902E20A32E280092E0C0 /* Sensor.swift in Sources */,
 				CEAAEFCC20A2DC35000FAE77 /* ViewController.swift in Sources */,
 				CEAAEFE120A3054D000FAE77 /* Temperatura.swift in Sources */,
 				CEAAEFCA20A2DC35000FAE77 /* AppDelegate.swift in Sources */,

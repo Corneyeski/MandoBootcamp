@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MandoViewController: UIViewController {
+class MandoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var blueView: UIView!
     @IBOutlet weak var coldImage: UIImageView!
@@ -26,11 +26,18 @@ class MandoViewController: UIViewController {
     @IBOutlet weak var line5BatteryView: UIView!
     @IBOutlet weak var hourStartLabel: UILabel!
     @IBOutlet weak var hourEndLabel: UILabel!
-    
+    @IBOutlet weak var movingPicker: UIPickerView!
     var velocity = 1 //2 arriba 2 abajo
     var velocitys = [UIView]()
     
+    var battery = 4 //todos arriba
+    var batterys = [UIView]()
+    
     var isOn = true
+    
+    var batteryTimer:Timer!
+    
+    var pickerData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +51,63 @@ class MandoViewController: UIViewController {
         self.velocitys[2].isHidden = true
         self.velocitys[3].isHidden = true
 
+        AireAcondicionado.AAcontroller.onOff()
         
-        // Do any additional setup after loading the view.
+        self.batterys = [line1BatteryView, line2BatteryView, line3BatteryView, line4BatteryView, line5BatteryView]
+        for views in self.batterys {
+            views.isHidden = false
+        }
+        
+        self.tempLabel.text = "24"
+        AireAcondicionado.AAcontroller.setTemuser(tem: Int(self.tempLabel.text!)!)
+        
+        self.batteryTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(updateBattery(data:)), userInfo: "", repeats: true)
+        
+        self.movingPicker.isHidden = false
+        self.movingPicker.delegate = self
+        self.movingPicker.dataSource = self
+                        pickerData = ["Item 1", "Item 2", "Item 2", "Item 2", "Item 2"]
+
     }
 
+    @objc private func updateBattery(data:Timer) {
+        if self.battery == 0 {
+            self.blueView.backgroundColor = UIColor(white: 0.0, alpha: 1.0)
+            self.isOn = false;
+            self.batteryTimer.invalidate()
+            self.battery = 4;
+            self.batterys[0].backgroundColor = UIColor.black
+        } else {
+            self.batterys[self.battery].isHidden = true
+            self.battery -= 1
+        }
+        if self.battery == 0 {
+            self.batterys[0].backgroundColor = UIColor.red
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // The number of columns of data
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // The number of rows of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    // The data to return for the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
     }
     
     @IBAction func lightButton(_ sender: UIButton) {
@@ -66,11 +123,14 @@ class MandoViewController: UIViewController {
         if self.isOn {
             self.blueView.backgroundColor = UIColor(white: 0.0, alpha: 1.0)
             self.isOn = false;
+            self.batterys[0].backgroundColor = UIColor.black
+            self.batteryTimer.invalidate()
+            
         } else {
             self.viewDidLoad()
             self.isOn = true;
         }
-        
+        AireAcondicionado.AAcontroller.onOff()
     }
     @IBAction func modeButton(_ sender: UIButton) {
         if self.coldImage.isHidden {
@@ -91,18 +151,22 @@ class MandoViewController: UIViewController {
             self.velocitys[self.velocity+1].isHidden = false
             self.velocity += 1
         }
+        AireAcondicionado.AAcontroller.changeSpeed(speed: self.velocity+1)
     }
     @IBAction func tempUpButton(_ sender: UIButton) {
         if Int(self.tempLabel.text!)! < 29 {
             self.tempLabel.text = String(Int(self.tempLabel.text!)!+1)
+            AireAcondicionado.AAcontroller.setTemuser(tem: Int(self.tempLabel.text!)!)
         }
     }
     @IBAction func tempDownButton(_ sender: UIButton) {
         if Int(self.tempLabel.text!)! > 15 {
             self.tempLabel.text = String(Int(self.tempLabel.text!)!-1)
+            AireAcondicionado.AAcontroller.setTemuser(tem: Int(self.tempLabel.text!)!)
         }
     }
     @IBAction func directionButton(_ sender: UIButton) {
+        
     }
     @IBAction func movingButton(_ sender: UIButton) {
     }
