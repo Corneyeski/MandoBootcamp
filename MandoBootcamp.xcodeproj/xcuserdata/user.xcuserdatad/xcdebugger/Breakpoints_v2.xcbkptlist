@@ -2,4 +2,84 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MandoBootcamp/MandoViewController.swift"
+            timestampString = "547735097.676349"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "MandoViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MandoBootcamp.MandoViewController.blueView.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIView&gt;"
+                  moduleName = "MandoBootcamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/Curso_iOS/11mayo/MandoBootcamp_tarda/MandoBootcamp/MandoViewController.swift"
+                  timestampString = "547735098.2402509"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MandoBootcamp.MandoViewController.blueView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIView&gt;"
+                  moduleName = "MandoBootcamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/Curso_iOS/11mayo/MandoBootcamp_tarda/MandoBootcamp/MandoViewController.swift"
+                  timestampString = "547735098.242224"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MandoBootcamp.MandoViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MandoBootcamp.MandoViewController"
+                  moduleName = "MandoBootcamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/Curso_iOS/11mayo/MandoBootcamp_tarda/MandoBootcamp/MandoViewController.swift"
+                  timestampString = "547735098.24459"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MandoBootcamp.MandoViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;MandoBootcamp.MandoViewController&gt;"
+                  moduleName = "MandoBootcamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/Curso_iOS/11mayo/MandoBootcamp_tarda/MandoBootcamp/MandoViewController.swift"
+                  timestampString = "547735098.246703"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "55">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
