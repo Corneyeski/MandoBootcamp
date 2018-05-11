@@ -117,6 +117,7 @@ class AireAcondicionado {
         }
     }
     
+    //RETURNS PARA OBTENER LOS DATOS DEL AIRE ACONDICIONADO (al ser private necesita los getters)
     func returnAmbiente() -> Int {
         return tAmbiente
     }
@@ -125,12 +126,14 @@ class AireAcondicionado {
         return (running,active)
     }
     
+    //funciona del timer check que obtiene la temperatura de sensor y la asigna a la variable de aire acondicionado
     @objc private func startCheckTemperature(data:Timer){
         AireAcondicionado.AAcontroller.tAmbiente = Sensor.SSensor.getTemperatura()
         checkAndRun()
         print("habitacion: \(tAmbiente) usuario: \(tuser)")
     }
     
+    //funcion del timer run Cuando la tAmbiente es diferente a la tUser cambia la tAmbiente hasta que se igualan
     @objc private func startTemperature(data:Timer){
         
         if tuser != tAmbiente{
