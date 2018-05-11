@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE345DE520A499C0000A1EE4 /* MovingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345DE420A499C0000A1EE4 /* MovingTableViewController.swift */; };
 		CE55902D20A2F84C0092E0C0 /* MandoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55902C20A2F84C0092E0C0 /* MandoViewController.swift */; };
 		CE55902E20A32E280092E0C0 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFDE20A2F9CC000FAE77 /* Sensor.swift */; };
 		CE55902F20A32E520092E0C0 /* AireAcondicionado.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAEFDC20A2F91F000FAE77 /* AireAcondicionado.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE345DE420A499C0000A1EE4 /* MovingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingTableViewController.swift; sourceTree = "<group>"; };
 		CE55902C20A2F84C0092E0C0 /* MandoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandoViewController.swift; sourceTree = "<group>"; };
 		CEAAEFC620A2DC35000FAE77 /* MandoBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MandoBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAAEFC920A2DC35000FAE77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				CEAAEFD220A2DC37000FAE77 /* LaunchScreen.storyboard */,
 				CEAAEFD520A2DC37000FAE77 /* Info.plist */,
 				CE55902C20A2F84C0092E0C0 /* MandoViewController.swift */,
+				CE345DE420A499C0000A1EE4 /* MovingTableViewController.swift */,
 			);
 			path = MandoBootcamp;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				CE55902D20A2F84C0092E0C0 /* MandoViewController.swift in Sources */,
 				CE55902E20A32E280092E0C0 /* Sensor.swift in Sources */,
 				CEAAEFCC20A2DC35000FAE77 /* ViewController.swift in Sources */,
+				CE345DE520A499C0000A1EE4 /* MovingTableViewController.swift in Sources */,
 				CEAAEFE120A3054D000FAE77 /* Temperatura.swift in Sources */,
 				CEAAEFCA20A2DC35000FAE77 /* AppDelegate.swift in Sources */,
 			);
